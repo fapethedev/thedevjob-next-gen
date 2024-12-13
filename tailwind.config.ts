@@ -12,11 +12,11 @@ const config: Config = {
     theme: {
         extend: {
             colors: {
-                'primary': '#008c9a',
-                'primary-alt': '#440098',
-                'secondary': '#1A1A1A',
-                'secondary-alt': '#333333',
-                'accents': '#009e64',
+                'primary': '#293040',
+                'primary-alt': '#091a42',
+                'secondary': '#D5B263',
+                'secondary-alt': '#564829',
+                'accents': '#C9AD8B',
                 background: 'var(--background)',
                 foreground: 'var(--foreground)'
             },
