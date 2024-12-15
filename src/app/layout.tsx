@@ -1,5 +1,7 @@
 import type {Metadata} from "next";
 import "./globals.css";
+import {ThemeProvider} from "@/components/theme-provider";
+import Header from "@/components/ui/header";
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -12,9 +14,17 @@ export default function RootLayout({ children }: Readonly<{
     return (
         <html lang="en">
             <body
-                className={`antialiased`}
+                className={`bg-slate-50 dark:bg-slate-950/80 antialiased h-full w-full`}
             >
-                {children}
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="dark"
+                    enableSystem
+                    disableTransitionOnChange
+                >
+                    <Header/>
+                    {children}
+                </ThemeProvider>
             </body>
         </html>
     );
