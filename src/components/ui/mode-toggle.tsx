@@ -6,6 +6,8 @@ import {useTheme} from "next-themes"
 
 import {Button} from "@/components/ui/button"
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger,} from "@/components/ui/dropdown-menu"
+import {cn} from "@/lib/utils";
+import {orbitron} from "@/app/font";
 
 export function ModeToggle() {
     const {setTheme} = useTheme();
@@ -21,19 +23,19 @@ export function ModeToggle() {
                     <span className="sr-only">Toggle theme</span>
                 </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-slate-50 dark:bg-slate-950/80" align="end">
+            <DropdownMenuContent className={cn("bg-slate-50 dark:bg-slate-950/80", orbitron.className)} align="end">
                 <DropdownMenuItem onClick={() => setTheme("light")}>
-                   <Button className="gap-0 w-full" variant="outline">
+                   <Button className="gap-0 w-full uppercase" variant="outline">
                        Light
                    </Button>
                 </DropdownMenuItem>
                 <DropdownMenuItem onClick={() => setTheme("dark")}>
-                    <Button className="gap-0 w-full" variant="outline">
+                    <Button className="gap-0 w-full uppercase" variant="outline">
                         Dark
                     </Button>
                 </DropdownMenuItem>
                 <DropdownMenuItem onClick={() => setTheme("system")}>
-                    <Button className="gap-0 w-full" variant="outline">
+                    <Button className="gap-0 w-full uppercase" variant="outline">
                         System
                     </Button>
                 </DropdownMenuItem>
