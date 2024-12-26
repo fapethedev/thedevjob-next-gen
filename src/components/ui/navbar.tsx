@@ -4,6 +4,7 @@ import Logo from "@/components/ui/logo";
 import {cn} from "@/lib/utils";
 import {orbitron} from "@/app/font";
 import Link from "next/link";
+import {Button} from "@/components/ui/button";
 
 
 const navigation = [
@@ -39,7 +40,12 @@ export default function Navbar({pathname}: {pathname: string}) {
                     </Link>
                 ))}
             </div>
-            <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+            <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-x-8">
+                <Link href="#" download target="_blank">
+                    <Button variant="default" className={cn("font-semibold uppercase", orbitron.className)}>
+                        Download CV
+                    </Button>
+                </Link>
                 <ModeToggle/>
             </div>
         </nav>
