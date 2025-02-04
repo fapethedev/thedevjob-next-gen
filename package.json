@@ -35,6 +35,7 @@
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.171.0",
     "three-globe": "^2.35.11",
+    "usehooks-ts": "^3.1.0",
     "zod": "^3.24.1"
   },
   "devDependencies": {
