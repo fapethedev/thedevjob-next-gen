@@ -19,5 +19,21 @@ const Section = React.forwardRef<
 
 Section.displayName = 'Section';
 
-export {Section};
+const HeroSection = React.forwardRef<
+    HTMLElement,
+    React.HTMLAttributes<HTMLElement>
+>(({className, children, ...props}, ref) => (
+    <Section
+        ref={ref}
+        className={cn("h-screen min-h-screen justify-center items-center z-0", className)}
+        {...props}
+    >
+        {children}
+    </Section>
+));
+
+HeroSection.displayName = 'HeroSection';
+
+
+export {Section, HeroSection};
 
